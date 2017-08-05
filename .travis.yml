@@ -9,8 +9,8 @@ cache:
   - $HOME/.m2/repository
 before_install:
   - mysql -e 'CREATE DATABASE reader;'
-
 script:
+  - mvn  io.takari:maven:wrapper
   - mvn install test
 
 
