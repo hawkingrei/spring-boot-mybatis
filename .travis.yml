@@ -1,0 +1,12 @@
+language: java
+services:
+- mysql
+- redis-server
+
+before_install:
+  - mysql -e 'CREATE DATABASE reader;'
+
+script:
+  - mvn install test
+
+
