@@ -5,11 +5,11 @@ services:
 - mysql
 - redis-server
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 cache:
   directories:
   - $HOME/.m2/repository
 before_install:
   - mysql -e 'CREATE DATABASE reader;'
 script:
-  - ./mvnw install
+  - ./mvnw test
