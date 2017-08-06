@@ -12,5 +12,6 @@ cache:
   - $HOME/.m2/repository
 before_install:
   - mysql -e 'CREATE DATABASE reader;'
+  - chmod +x mvnw
 script:
   - ./mvnw test
