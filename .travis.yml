@@ -10,6 +10,4 @@ cache:
 before_install:
   - mysql -e 'CREATE DATABASE reader;'
 script:
-  - ./mvnw install test
-
-
+  - ./mvnw install
