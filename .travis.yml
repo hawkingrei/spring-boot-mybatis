@@ -5,6 +5,7 @@ services:
 - mysql
 - redis-server
 install:
+  - mvn -N io.takari:maven:wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 cache:
   directories:
